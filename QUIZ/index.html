@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1>Quiz de Conocimientos Generales</h1>
+            <div class="category" id="current-category"></div>
+        </div>
+        <div class="score-container">
+            <span>Pregunta: <span id="current-question">1</span>/25</span>
+            <span>Puntuación: <span id="score">0</span></span>
+        </div>
+        <div id="quiz-content">
+            <div class="question" id="question"></div>
+            <div class="options" id="options"></div>
+            <button class="next-btn" id="next-btn" disabled>Siguiente Pregunta</button>
+        </div>
+        <div class="result-container" id="result-container">
+            <h2>¡Quiz Completado!</h2>
+            <div class="result-details">
+                <p>Tu puntuación final es: <span id="final-score">0</span>/25</p>
+                <p>Preguntas acertadas: <span id="correct-answers">0</span></p>
+                <p>Preguntas falladas: <span id="wrong-answers">0</span></p>
+            </div>
+            <div id="result-message"></div>
+            <button class="restart-btn" id="restart-btn">Reiniciar Quiz</button>
+        </div>
+    </div>
+</body>
+</html>
