@@ -1,5 +1,5 @@
 const questions = [
-    // Ciencia
+    
     {
         category: "Ciencia",
         question: "¿Cuál es el planeta más grande del sistema solar?",
@@ -61,7 +61,7 @@ const questions = [
         options: ["1490", "1491", "1492", "1493"],
         correct: 2
     },
-    // Arte
+    
     {
         category: "Arte",
         question: "¿Quién pintó La Noche Estrellada?",
@@ -92,7 +92,7 @@ const questions = [
         options: ["Pablo Picasso", "Claude Monet", "Vincent van Gogh", "Salvador Dalí"],
         correct: 2
     },
-    // Geografía
+    
     {
         category: "Geografía",
         question: "¿Cuál es el río más largo del mundo?",
@@ -123,7 +123,7 @@ const questions = [
         options: ["Atlántico", "Índico", "Ártico", "Pacífico"],
         correct: 3
     },
-    // Deportes
+    
     {
         category: "Deportes",
         question: "¿En qué deporte se usa un implemento llamado 'raqueta'?",
@@ -160,7 +160,7 @@ let currentQuestion = 0;
 let score = 0;
 let questionAnswered = false;
 
-// Referencias al DOM
+
 const questionElement = document.getElementById('question');
 const optionsElement = document.getElementById('options');
 const nextButton = document.getElementById('next-btn');
@@ -215,7 +215,7 @@ function selectOption(selectedIndex) {
     nextButton.disabled = false;
 }
 
-// ... [Todo el código anterior se mantiene igual hasta la función showResults]
+
 
 function showResults() {
     quizContent.style.display = 'none';
@@ -230,7 +230,7 @@ function showResults() {
 
     const resultMessage = document.getElementById('result-message');
     
-    // Si acertó más de la mitad de las preguntas (13 o más)
+    
     if (correctAnswers > questions.length / 2) {
         resultMessage.innerHTML = `
             <div class="trophy animated-trophy">🏆</div>
@@ -243,7 +243,7 @@ function showResults() {
     }
 }
 
-// Evento para el botón siguiente
+
 nextButton.addEventListener('click', () => {
     currentQuestion++;
     
@@ -254,7 +254,7 @@ nextButton.addEventListener('click', () => {
     }
 });
 
-// Evento para reiniciar el quiz
+
 restartButton.addEventListener('click', () => {
     currentQuestion = 0;
     score = 0;
@@ -265,5 +265,5 @@ restartButton.addEventListener('click', () => {
     showQuestion();
 });
 
-// Iniciar el quiz
+
 showQuestion();
